@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiences | The Sky Imperial Hotels & Resorts</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.exp-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:80px;}
+.exp-hero-img{overflow:hidden;aspect-ratio:16/9;position:relative;}
+.exp-hero-img:first-child{aspect-ratio:4/3;}
+.exp-hero-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.75);transition:transform .7s,filter .5s;}
+.exp-hero-img:hover img{transform:scale(1.04);filter:brightness(.55);}
+.exp-hero-img-label{position:absolute;bottom:20px;left:20px;font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--white);}
+.exp-hero-img-label span{display:block;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.exp-section-block{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:80px 0;border-bottom:1px solid rgba(201,169,110,.1);}
+.exp-section-block:last-child{border-bottom:none;}
+.exp-section-block.alt{direction:rtl;}
+.exp-section-block.alt>*{direction:ltr;}
+.exp-img{overflow:hidden;aspect-ratio:4/3;position:relative;}
+.exp-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.82);transition:transform .7s;}
+.exp-img:hover img{transform:scale(1.04);}
+.exp-content{display:flex;flex-direction:column;gap:20px;}
+.inc-list{display:flex;flex-direction:column;gap:10px;margin:8px 0;}
+.inc-item{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--text-mid);}
+.inc-item::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0;}
+.dining-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:52px;}
+.dining-card{background:var(--dark2);overflow:hidden;}
+.dining-card-img{height:220px;overflow:hidden;}
+.dining-card-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.8);transition:transform .7s;}
+.dining-card:hover .dining-card-img img{transform:scale(1.06);}
+.dining-body{padding:24px;}
+.dining-type{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.dining-name{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:8px;}
+.dining-desc{font-size:13px;color:var(--text-mid);line-height:1.7;}
+@media(max-width:768px){.exp-hero-grid,.exp-section-block,.exp-section-block.alt{grid-template-columns:1fr;direction:ltr;}.dining-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">The Sky <span>Imperial</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="experiences.html" class="active">Experiences</a></li><li><a href="offers.html">Offers</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html#book" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu"><a href="about.html" onclick="toggleMenu()">About</a><a href="destinations.html" onclick="toggleMenu()">Destinations</a><a href="experiences.html" onclick="toggleMenu()">Experiences</a><a href="offers.html" onclick="toggleMenu()">Offers</a><a href="gallery.html" onclick="toggleMenu()">Gallery</a><a href="contact.html" onclick="toggleMenu()">Contact</a><a href="index.html#book" onclick="toggleMenu()" style="color:var(--gold)">Book Now</a></div>
+
+<div class="page-hero">
+  <div class="page-hero-bg"><img src="https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=1600&q=85" alt="Sky Imperial signature dining and experiences"></div>
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Experiences</span></div>
+    <span class="section-tag">Crafted Experiences</span>
+    <h1>More Than a Stay —<br><em>A Memory</em></h1>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="exp-hero-grid fade-up">
+      <div class="exp-hero-img" style="grid-row:span 2;">
+        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=85" alt="Sky Imperial luxury suite — premium room stay experience">
+        <div class="exp-hero-img-label"><span>Room Experience</span>Luxury Stay</div>
+      </div>
+      <div class="exp-hero-img">
+        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=900&q=85" alt="Sky Imperial fine dining restaurant premium food">
+        <div class="exp-hero-img-label"><span>Food & Drink</span>Elevated Dining</div>
+      </div>
+      <div class="exp-hero-img">
+        <img src="https://images.unsplash.com/photo-1615880484746-a134be9a6ecf?w=900&q=85" alt="Sky Imperial spa wellness treatment relaxation">
+        <div class="exp-hero-img-label"><span>Wellness</span>Spa & Relaxation</div>
+      </div>
+    </div>
+
+    <!-- LUXURY STAY -->
+    <div class="exp-section-block fade-up" id="rooms">
+      <div class="exp-img"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=900&q=85" alt="Sky Imperial presidential suite bedroom gold interior design"></div>
+      <div class="exp-content">
+        <span class="section-tag">Rooms & Suites</span>
+        <h2 class="section-title">Luxury That <em>Inspires Rest</em></h2>
+        <span class="gold-line"></span>
+        <p class="section-body" style="max-width:100%;">From deluxe rooms to presidential suites, every space at The Sky Imperial is designed to feel like home — only better. Contemporary Indian aesthetics, premium bedding, and curated in-room amenities.</p>
+        <div class="inc-list">
+          <div class="inc-item">Handcrafted mattresses with 400-thread-count linen</div>
+          <div class="inc-item">Smart TV, high-speed WiFi, tea/coffee station</div>
+          <div class="inc-item">Premium bath amenities and rain showers</div>
+          <div class="inc-item">In-room dining available around the clock</div>
+          <div class="inc-item">Turndown service with local sweets and fresh flowers</div>
+        </div>
+        <a href="index.html#book" class="btn-primary" style="width:fit-content;margin-top:8px;">Book a Room</a>
+      </div>
+    </div>
+
+    <!-- WEDDINGS -->
+    <div class="exp-section-block alt fade-up" id="weddings">
+      <div class="exp-img"><img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=900&q=85" alt="Sky Imperial grand ballroom wedding ceremony floral decoration"></div>
+      <div class="exp-content">
+        <span class="section-tag">Weddings & Celebrations</span>
+        <h2 class="section-title">Your Perfect <em>Forever Begins Here</em></h2>
+        <span class="gold-line"></span>
+        <p class="section-body" style="max-width:100%;">From intimate 50-guest ceremonies to grand 800-guest celebrations, our dedicated wedding team handles every detail — from floral décor to the final dance. Your vision, our execution.</p>
+        <div class="inc-list">
+          <div class="inc-item">Dedicated wedding coordinator from day 1</div>
+          <div class="inc-item">Indoor & outdoor venues, rooftops, and gardens</div>
+          <div class="inc-item">Custom menus with Indian and international cuisine</div>
+          <div class="inc-item">Décor, photography, entertainment coordination</div>
+          <div class="inc-item">Special honeymoon suite with decoration included</div>
+        </div>
+        <a href="contact.html" class="btn-primary" style="width:fit-content;margin-top:8px;">Plan Your Wedding</a>
+      </div>
+    </div>
+
+    <!-- CORPORATE -->
+    <div class="exp-section-block fade-up" id="corporate">
+      <div class="exp-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=85" alt="Sky Imperial conference room business meeting corporate event"></div>
+      <div class="exp-content">
+        <span class="section-tag">Corporate & MICE</span>
+        <h2 class="section-title">Events That <em>Deliver Results</em></h2>
+        <span class="gold-line"></span>
+        <p class="section-body" style="max-width:100%;">Boardroom meetings, annual conferences, product launches, team-building retreats — our MICE team ensures every corporate event runs without a hitch. State-of-the-art tech, breakout rooms, and catering all under one roof.</p>
+        <div class="inc-list">
+          <div class="inc-item">Conference rooms for 10–500 delegates</div>
+          <div class="inc-item">HD projectors, video conferencing, seamless WiFi</div>
+          <div class="inc-item">Dedicated AV and IT support team on-site</div>
+          <div class="inc-item">Corporate room rates and GST-compliant invoicing</div>
+        </div>
+        <a href="contact.html" class="btn-primary" style="width:fit-content;margin-top:8px;">Plan an Event</a>
+      </div>
+    </div>
+
+    <!-- DINING -->
+    <div id="dining" style="padding:80px 0 0;">
+      <span class="section-tag fade-up">Food & Beverage</span>
+      <h2 class="section-title fade-up d1">Elevated Dining at <em>Every Property</em></h2>
+      <div class="dining-grid fade-up d1">
+        <div class="dining-card">
+          <div class="dining-card-img"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=700&q=85" alt="Sky Imperial signature restaurant multi-course dinner"></div>
+          <div class="dining-body"><div class="dining-type">Signature Restaurant</div><div class="dining-name">The Imperial Table</div><p class="dining-desc">Our flagship dining experience — a curated multi-course menu celebrating the best regional and international cuisine. Open for breakfast, lunch, and dinner.</p></div>
+        </div>
+        <div class="dining-card">
+          <div class="dining-card-img"><img src="https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=700&q=85" alt="Sky Imperial rooftop bar cocktails night views"></div>
+          <div class="dining-body"><div class="dining-type">Rooftop Bar</div><div class="dining-name">Sky Lounge</div><p class="dining-desc">Craft cocktails, premium whiskeys, and light bites under the open sky. Sunset views and live music on weekends at select properties.</p></div>
+        </div>
+        <div class="dining-card">
+          <div class="dining-card-img"><img src="https://images.unsplash.com/photo-1567359781514-3b964e2b04d6?w=700&q=85" alt="Sky Imperial garden restaurant outdoor al fresco dining"></div>
+          <div class="dining-body"><div class="dining-type">Garden Restaurant</div><div class="dining-name">The Courtyard</div><p class="dining-desc">Al fresco dining surrounded by manicured gardens. Perfect for family breakfasts, romantic lunches, or lazy Sunday brunches.</p></div>
+        </div>
+        <div class="dining-card">
+          <div class="dining-card-img"><img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=700&q=85" alt="Sky Imperial room service private in-room dining"></div>
+          <div class="dining-body"><div class="dining-type">In-Room Dining</div><div class="dining-name">Your Room, Your Timing</div><p class="dining-desc">Full restaurant menu available 24 hours in your room. From a midnight snack to a full celebratory breakfast in bed.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><a href="index.html" class="nav-logo">The Sky <span style="color:var(--cream)">Imperial</span></a><p class="footer-about">25+ destinations. Modern comfort, timeless hospitality.</p><div class="footer-social"><a href="https://www.facebook.com/theskyimperial.official/" target="_blank">f</a><a href="https://www.instagram.com/the_sky_imperial" target="_blank">in</a><a href="mailto:bookings@theskyimperial.com">✉</a></div></div><div class="footer-col"><h4>Experiences</h4><ul><li><a href="#rooms">Rooms & Suites</a></li><li><a href="#weddings">Weddings</a></li><li><a href="#corporate">Corporate</a></li><li><a href="#dining">Dining</a></li></ul></div><div class="footer-col"><h4>Explore</h4><ul><li><a href="destinations.html">Destinations</a></li><li><a href="offers.html">Offers</a></li><li><a href="gallery.html">Gallery</a></li></ul></div><div class="footer-col"><h4>Book Direct</h4><ul><li><a href="index.html#book">Check Availability</a></li><li><a href="tel:+919510771506">+91 95107 71506</a></li></ul></div></div><div class="footer-bottom"><p class="footer-copy">© 2025 The Sky Imperial Hotels & Resorts.</p><div class="footer-badges"><span class="badge">🔒 Secure</span><span class="badge">✓ Best Rate</span></div></div></div></footer>
+<div class="sticky-book" id="stickyBook"><div class="sticky-book-text">Ready to <strong>book?</strong></div><a href="index.html#book" class="btn-primary" style="font-size:11px;padding:12px 24px;">Book Now</a></div>
+<button class="chat-btn" onclick="toggleChat()">💬</button>
+<div class="chat-window" id="chatWindow"><div class="chat-header"><div class="chat-header-title">🏨 Sky Imperial Concierge</div><button class="chat-close" onclick="toggleChat()">✕</button></div><div class="chat-messages" id="chatMessages"><div class="chat-msg bot">Hello! Can I help you plan an experience? 🌟</div></div><div class="chat-suggestions"><button class="chat-suggest" onclick="sendSuggest('Book a Room')">🗓️ Book</button><button class="chat-suggest" onclick="sendSuggest('Wedding Enquiry')">💍 Wedding</button><button class="chat-suggest" onclick="sendSuggest('Contact / Help')">📞 Help</button></div><div class="chat-input-area"><input class="chat-input" id="chatInput" placeholder="Type..."><button class="chat-send" onclick="sendMsg()">➤</button></div></div>
+<script src="shared.js"></script>
+</body></html>

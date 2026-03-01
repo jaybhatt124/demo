@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | The Sky Imperial Hotels & Resorts</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.about-lead{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:300;line-height:1.5;color:var(--cream2);max-width:800px;margin:40px 0;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin:80px 0;}
+.about-grid.reverse{direction:rtl;}
+.about-grid.reverse>*{direction:ltr;}
+.about-img{overflow:hidden;aspect-ratio:4/3;position:relative;}
+.about-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.88);transition:transform .8s;}
+.about-img:hover img{transform:scale(1.04);}
+.about-img-tag{position:absolute;bottom:20px;right:20px;background:rgba(13,13,13,.88);backdrop-filter:blur(6px);padding:12px 18px;border-right:2px solid var(--gold);text-align:right;}
+.about-img-tag .n{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);}
+.about-img-tag .l{font-size:10px;letter-spacing:2px;color:var(--text-mid);text-transform:uppercase;}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin:52px 0;}
+.value-card{background:var(--dark2);padding:48px 36px;border-top:3px solid transparent;transition:border-color .3s,background .3s;}
+.value-card:hover{border-color:var(--gold);background:var(--dark3);}
+.v-icon{font-size:36px;margin-bottom:20px;display:block;}
+.v-title{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--cream);margin-bottom:10px;}
+.v-body{font-size:14px;line-height:1.8;color:var(--text-mid);}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:52px;}
+.team-card{text-align:center;}
+.team-avatar{width:100%;aspect-ratio:1;overflow:hidden;margin-bottom:18px;position:relative;}
+.team-avatar img{width:100%;height:100%;object-fit:cover;filter:grayscale(.3);transition:filter .4s,transform .4s;}
+.team-card:hover .team-avatar img{filter:grayscale(0);transform:scale(1.05);}
+.team-name{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--cream);margin-bottom:4px;}
+.team-role{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
+.timeline{margin:52px 0;position:relative;padding-left:40px;}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:1px;background:rgba(201,169,110,.25);}
+.tl-item{position:relative;margin-bottom:40px;}
+.tl-item::before{content:'';position:absolute;left:-36px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--dark2);}
+.tl-year{font-size:11px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:6px;}
+.tl-title{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--cream);margin-bottom:6px;}
+.tl-body{font-size:14px;color:var(--text-mid);line-height:1.7;}
+@media(max-width:768px){.about-grid,.about-grid.reverse{grid-template-columns:1fr;direction:ltr;}.values-grid{grid-template-columns:1fr;}.team-grid{grid-template-columns:repeat(2,1fr);}}
+</style>
+</head>
+<body>
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">The Sky <span>Imperial</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="offers.html">Offers</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html#book" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu"><a href="about.html" onclick="toggleMenu()">About</a><a href="destinations.html" onclick="toggleMenu()">Destinations</a><a href="experiences.html" onclick="toggleMenu()">Experiences</a><a href="offers.html" onclick="toggleMenu()">Offers</a><a href="gallery.html" onclick="toggleMenu()">Gallery</a><a href="contact.html" onclick="toggleMenu()">Contact</a><a href="index.html#book" onclick="toggleMenu()" style="color:var(--gold)">Book Now</a></div>
+
+<div class="page-hero">
+  <div class="page-hero-bg"><img src="https://images.unsplash.com/photo-1596436232729-6d9a84f50eab?w=1600&q=85" alt="The Sky Imperial resort aerial view — our story"></div>
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>About Us</span></div>
+    <span class="section-tag">Our Story</span>
+    <h1>About The Sky <em>Imperial</em></h1>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <span class="section-tag fade-up">Who We Are</span>
+    <p class="about-lead fade-up d1">"We didn't just want to build hotels. We wanted to build homes away from home — places where every guest feels they truly belong."</p>
+    <span class="gold-line"></span>
+
+    <div class="about-grid fade-up">
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=900&q=85" alt="Sky Imperial flagship lobby — warm hospitality in action">
+        <div class="about-img-tag"><div class="n">2015</div><div class="l">Founded</div></div>
+      </div>
+      <div>
+        <span class="section-tag">The Beginning</span>
+        <h2 class="section-title">A Vision Born<br><em>From Belonging</em></h2>
+        <span class="gold-line"></span>
+        <p class="section-body" style="max-width:100%;">The Sky Imperial Hotels & Resorts was founded with a clear purpose: to create hospitality experiences that feel genuinely personal. Starting with our flagship Bapu's Resort in Dwarka, Gujarat, we set out to combine the warmth of Indian hospitality with world-class amenities.</p>
+        <p class="section-body" style="max-width:100%;margin-top:16px;">Today, with 25+ properties across three states and a 4.3★ Google rating from over 2,100 guests, that original vision has only grown stronger.</p>
+      </div>
+    </div>
+
+    <div class="about-grid reverse fade-up">
+      <div>
+        <span class="section-tag">Our Growth</span>
+        <h2 class="section-title">From One Resort<br><em>To 25+ Destinations</em></h2>
+        <span class="gold-line"></span>
+        <p class="section-body" style="max-width:100%;">What began as a single beachfront resort has grown into one of India's fastest-expanding hospitality brands. We now serve business travellers, honeymooners, families, and event planners across Gujarat, Rajasthan, and Madhya Pradesh.</p>
+        <div class="timeline" style="margin-top:32px;">
+          <div class="tl-item"><div class="tl-year">2015</div><div class="tl-title">First Resort — Dwarka, Gujarat</div><div class="tl-body">Bapu's Resort opens with 40 rooms and immediately earns a 4.3★ rating.</div></div>
+          <div class="tl-item"><div class="tl-year">2018</div><div class="tl-title">Rajasthan Expansion</div><div class="tl-body">Three new properties launched across Jaipur, Udaipur, and Jodhpur.</div></div>
+          <div class="tl-item"><div class="tl-year">2021</div><div class="tl-title">Madhya Pradesh Entry</div><div class="tl-body">Expanded into Central India with nature retreats and heritage properties.</div></div>
+          <div class="tl-item"><div class="tl-year">2025</div><div class="tl-title">25+ Properties & Growing</div><div class="tl-body">Now India's premier mid-luxury hotel group with 2,100+ verified reviews.</div></div>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=900&q=85" alt="Sky Imperial modern hotel expansion — contemporary luxury">
+        <div class="about-img-tag"><div class="n">25+</div><div class="l">Properties</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--dark2);">
+  <div class="container">
+    <span class="section-tag fade-up">What We Stand For</span>
+    <h2 class="section-title fade-up d1">Our Values</h2>
+    <div class="values-grid">
+      <div class="value-card fade-up"><span class="v-icon">🤝</span><div class="v-title">Genuine Hospitality</div><p class="v-body">We train every team member to see guests as individuals — not room numbers. Every interaction is personal, warm, and memorable.</p></div>
+      <div class="value-card fade-up d1"><span class="v-icon">🌍</span><div class="v-title">Rooted in India</div><p class="v-body">Each property celebrates local culture, cuisine, and heritage. We believe the best travel experience connects you to the place you're visiting.</p></div>
+      <div class="value-card fade-up d2"><span class="v-icon">⭐</span><div class="v-title">Consistent Excellence</div><p class="v-body">From a ₹3,000/night business room to a ₹8,000 honeymoon suite — every guest receives the same standard of thoughtful, attentive care.</p></div>
+      <div class="value-card fade-up"><span class="v-icon">♻️</span><div class="v-title">Responsible Tourism</div><p class="v-body">We source locally, minimize waste, and invest in the communities around our properties — because good hospitality extends beyond our walls.</p></div>
+      <div class="value-card fade-up d1"><span class="v-icon">💡</span><div class="v-title">Continuous Innovation</div><p class="v-body">From digital check-in to real-time booking, we embrace technology that makes the guest experience smoother and more personalized.</p></div>
+      <div class="value-card fade-up d2"><span class="v-icon">👨‍👩‍👧</span><div class="v-title">Family at Heart</div><p class="v-body">The Sky Imperial began as a family vision. That spirit — of care, belonging, and generosity — is at the center of everything we do.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="stats-row fade-up">
+      <div class="stat-box"><div class="stat-num">25+</div><div class="stat-label">Properties</div></div>
+      <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">States</div></div>
+      <div class="stat-box"><div class="stat-num">2,100+</div><div class="stat-label">Reviews</div></div>
+      <div class="stat-box"><div class="stat-num">4.3★</div><div class="stat-label">Google Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--dark2);">
+  <div class="container">
+    <span class="section-tag fade-up">Partner With Us</span>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;" class="fade-up d1">
+      <div>
+        <h2 class="section-title">Grow With<br><em>The Sky Imperial</em></h2>
+        <span class="gold-line"></span>
+        <p class="section-body" style="max-width:100%;margin-bottom:24px;">We're actively looking for hotel and resort partners across India. If you own a property and want to grow under a trusted brand with proven operations, marketing, and a loyal guest base — let's talk.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--gold);font-size:18px;">✓</span><span style="font-size:14px;color:var(--text-mid);">Full brand and operational support</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--gold);font-size:18px;">✓</span><span style="font-size:14px;color:var(--text-mid);">Central reservations and marketing</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--gold);font-size:18px;">✓</span><span style="font-size:14px;color:var(--text-mid);">Proven revenue management strategies</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--gold);font-size:18px;">✓</span><span style="font-size:14px;color:var(--text-mid);">Staff training and SOPs included</span></div>
+        </div>
+        <a href="contact.html" class="btn-primary">Enquire About Partnering</a>
+      </div>
+      <div class="about-img"><img src="https://images.unsplash.com/photo-1599930113854-d6d7fd522504?w=900&q=85" alt="Sky Imperial beachfront resort — partner with us to grow your hotel"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><a href="index.html" class="nav-logo">The Sky <span style="color:var(--cream)">Imperial</span></a><p class="footer-about">India's premier hospitality group. Modern comfort, timeless hospitality.</p><div class="footer-social"><a href="https://www.facebook.com/theskyimperial.official/" target="_blank">f</a><a href="https://www.instagram.com/the_sky_imperial" target="_blank">in</a><a href="mailto:bookings@theskyimperial.com">✉</a></div></div><div class="footer-col"><h4>Explore</h4><ul><li><a href="destinations.html">Destinations</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="offers.html">Offers</a></li><li><a href="gallery.html">Gallery</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="#">Partner With Us</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+919510771506">+91 95107 71506</a></li><li><a href="mailto:bookings@theskyimperial.com">Email Us</a></li><li><a href="contact.html">Get Directions</a></li></ul></div></div><div class="footer-bottom"><p class="footer-copy">© 2025 The Sky Imperial Hotels & Resorts.</p><div class="footer-badges"><span class="badge">🔒 Secure</span><span class="badge">✓ Best Rate</span><span class="badge">⭐ 4.3 Google</span></div></div></div></footer>
+<div class="sticky-book" id="stickyBook"><div class="sticky-book-text">Ready to <strong>book?</strong></div><a href="index.html#book" class="btn-primary" style="font-size:11px;padding:12px 24px;">Book Now</a></div>
+<button class="chat-btn" onclick="toggleChat()">💬</button>
+<div class="chat-window" id="chatWindow"><div class="chat-header"><div class="chat-header-title">🏨 Sky Imperial Concierge</div><button class="chat-close" onclick="toggleChat()">✕</button></div><div class="chat-messages" id="chatMessages"><div class="chat-msg bot">Hello! How can I help you today? 🌟</div></div><div class="chat-suggestions"><button class="chat-suggest" onclick="sendSuggest('Book a Room')">🗓️ Book</button><button class="chat-suggest" onclick="sendSuggest('Contact / Help')">📞 Help</button></div><div class="chat-input-area"><input class="chat-input" id="chatInput" placeholder="Type..."><button class="chat-send" onclick="sendMsg()">➤</button></div></div>
+<script src="shared.js"></script>
+</body></html>

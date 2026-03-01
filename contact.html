@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | The Sky Imperial Hotels & Resorts</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.contact-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;}
+.contact-info{display:flex;flex-direction:column;gap:36px;}
+.contact-block{border-left:2px solid rgba(201,169,110,.3);padding-left:24px;}
+.contact-block:hover{border-color:var(--gold);}
+.c-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.c-value{font-size:15px;color:var(--cream);line-height:1.6;}
+.c-sub{font-size:13px;color:var(--text-mid);margin-top:4px;}
+.contact-form{background:var(--dark2);padding:48px;border:1px solid rgba(201,169,110,.12);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:52px;}
+.faq-item{background:var(--dark2);padding:32px;cursor:pointer;transition:background .3s;}
+.faq-item:hover{background:var(--dark3);}
+.faq-q{font-size:15px;font-weight:500;color:var(--cream);margin-bottom:10px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+.faq-q span{color:var(--gold);font-size:18px;transition:transform .3s;flex-shrink:0;}
+.faq-item.open .faq-q span{transform:rotate(45deg);}
+.faq-a{font-size:13px;color:var(--text-mid);line-height:1.8;display:none;padding-top:8px;}
+.faq-item.open .faq-a{display:block;}
+.policy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;}
+.policy-card{background:var(--dark2);padding:28px;border-top:2px solid rgba(201,169,110,.2);}
+.policy-icon{font-size:24px;margin-bottom:14px;}
+.policy-title{font-size:14px;font-weight:600;color:var(--cream);margin-bottom:8px;}
+.policy-body{font-size:13px;color:var(--text-mid);line-height:1.7;}
+@media(max-width:768px){.contact-layout{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}.faq-grid{grid-template-columns:1fr;}.policy-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">The Sky <span>Imperial</span></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="offers.html">Offers</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="index.html#book" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu"><a href="about.html" onclick="toggleMenu()">About</a><a href="destinations.html" onclick="toggleMenu()">Destinations</a><a href="experiences.html" onclick="toggleMenu()">Experiences</a><a href="offers.html" onclick="toggleMenu()">Offers</a><a href="gallery.html" onclick="toggleMenu()">Gallery</a><a href="contact.html" onclick="toggleMenu()">Contact</a><a href="index.html#book" onclick="toggleMenu()" style="color:var(--gold)">Book Now</a></div>
+
+<div class="page-hero">
+  <div class="page-hero-bg"><img src="https://images.unsplash.com/photo-1615880484746-a134be9a6ecf?w=1600&q=85" alt="Sky Imperial concierge and hospitality team at your service"></div>
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Contact</span></div>
+    <span class="section-tag">Get In Touch</span>
+    <h1>We're Here<br><em>For You</em></h1>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="contact-layout">
+      <div class="contact-info fade-up">
+        <div>
+          <span class="section-tag">Contact Details</span>
+          <h2 class="section-title" style="font-size:clamp(30px,4vw,48px);">Reach Our<br><em>Team Anytime</em></h2>
+          <span class="gold-line"></span>
+          <p class="section-body" style="max-width:100%;">Whether you're booking a room, planning a wedding, or simply have a question — our team is available 24×7 to assist you.</p>
+        </div>
+        <div class="contact-block"><div class="c-label">Reservations & Bookings</div><div class="c-value"><a href="tel:+919510771506" style="color:var(--cream);text-decoration:none;">+91 95107 71506</a></div><div class="c-sub">Available 24 hours, 7 days a week</div></div>
+        <div class="contact-block"><div class="c-label">Email Us</div><div class="c-value"><a href="mailto:bookings@theskyimperial.com" style="color:var(--cream);text-decoration:none;">bookings@theskyimperial.com</a></div><div class="c-sub">Response within 2–4 hours</div></div>
+        <div class="contact-block"><div class="c-label">Head Office</div><div class="c-value">Gujarat, India</div><div class="c-sub">The Sky Imperial Hotels & Resorts Pvt. Ltd.</div></div>
+        <div class="contact-block"><div class="c-label">Social Media</div><div class="c-value" style="display:flex;gap:12px;margin-top:8px;">
+          <a href="https://www.facebook.com/theskyimperial.official/" target="_blank" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(201,169,110,.3);color:var(--gold);transition:background .3s;font-size:14px;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--dark)'" onmouseout="this.style.background='';this.style.color='var(--gold)'">f</a>
+          <a href="https://www.instagram.com/the_sky_imperial" target="_blank" style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(201,169,110,.3);color:var(--gold);transition:background .3s;font-size:14px;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--dark)'" onmouseout="this.style.background='';this.style.color='var(--gold)'">in</a>
+        </div><div class="c-sub">@the_sky_imperial · theskyimperial.official</div></div>
+      </div>
+
+      <div class="contact-form fade-up d1">
+        <span class="section-tag">Send a Message</span>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--cream);margin-bottom:28px;line-height:1.2;">How Can We<br><em>Help You?</em></h3>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">First Name</label><input class="form-input" type="text" placeholder="Your first name"></div>
+          <div class="form-group"><label class="form-label">Last Name</label><input class="form-input" type="text" placeholder="Your last name"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="your@email.com"></div>
+          <div class="form-group"><label class="form-label">Phone</label><input class="form-input" type="tel" placeholder="+91 00000 00000"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Enquiry Type</label>
+          <select class="form-select">
+            <option>Room Booking</option>
+            <option>Wedding / Event Enquiry</option>
+            <option>Corporate Event</option>
+            <option>Group Booking</option>
+            <option>Partner With Us</option>
+            <option>General Query</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Check In Date</label><input class="form-input" type="date" id="checkin"></div>
+          <div class="form-group"><label class="form-label">Check Out Date</label><input class="form-input" type="date" id="checkout"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Preferred Property</label>
+          <select class="form-select">
+            <option>No Preference</option>
+            <option>Gujarat — Dwarka (Bapu's Resort)</option>
+            <option>Gujarat — Ahmedabad</option>
+            <option>Rajasthan — Jaipur</option>
+            <option>Rajasthan — Udaipur</option>
+            <option>Madhya Pradesh — Bhopal</option>
+            <option>Other / Let Us Suggest</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell us about your requirements, dates, group size, or any special requests..."></textarea></div>
+        <button class="btn-primary" style="width:100%;text-align:center;" onclick="submitForm()">Send Enquiry →</button>
+        <p style="font-size:11px;color:var(--text-mid);text-align:center;margin-top:12px;">🔒 Your information is safe with us. We will never share your data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POLICIES -->
+<section style="background:var(--dark2);">
+  <div class="container">
+    <span class="section-tag fade-up">Policies & Info</span>
+    <h2 class="section-title fade-up d1">Good to Know<br><em>Before You Arrive</em></h2>
+    <div class="policy-grid fade-up d1">
+      <div class="policy-card"><div class="policy-icon">🏨</div><div class="policy-title">Check-In / Check-Out</div><p class="policy-body">Standard check-in at 2 PM, checkout at 11 AM. Early check-in and late checkout available on request (subject to availability). Corporate package includes early check-in.</p></div>
+      <div class="policy-card"><div class="policy-icon">🚫</div><div class="policy-title">Cancellation Policy</div><p class="policy-body">Free cancellation up to 48 hours before arrival. Cancellations within 48 hours are charged 1 night's rate. Non-refundable rates offer the best pricing.</p></div>
+      <div class="policy-card"><div class="policy-icon">🐾</div><div class="policy-title">Pets & Visitors</div><p class="policy-body">Pet-friendly rooms available at select properties — please mention at time of booking. Day visitors welcome with prior arrangement.</p></div>
+      <div class="policy-card"><div class="policy-icon">🍼</div><div class="policy-title">Children Policy</div><p class="policy-body">Children under 5 stay free. Ages 6–12 are charged at ₹500/night for an extra bed with breakfast. Baby cots available on request at no charge.</p></div>
+      <div class="policy-card"><div class="policy-icon">💳</div><div class="policy-title">Payments Accepted</div><p class="policy-body">All major credit/debit cards, UPI, net banking, and cash accepted. GST-compliant invoices available for corporate bookings.</p></div>
+      <div class="policy-card"><div class="policy-icon">🔒</div><div class="policy-title">Privacy & Security</div><p class="policy-body">Your personal data is encrypted and never shared with third parties. Booking data is stored securely in compliance with Indian data protection regulations.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <span class="section-tag fade-up">FAQ</span>
+    <h2 class="section-title fade-up d1" style="margin-bottom:0;">Frequently Asked<br><em>Questions</em></h2>
+    <div class="faq-grid fade-up d1">
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Is breakfast included in all rooms? <span>+</span></div><div class="faq-a">Breakfast is included in select packages such as the Weekend Escape and Corporate Stay. Room-only rates do not include breakfast, but our restaurants are open for all meals with excellent value options.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">How do I get the best rate? <span>+</span></div><div class="faq-a">Always book directly with us at theskyimperial.com or by calling +91 95107 71506. Direct bookings consistently offer the lowest rates, flexible cancellation, and complimentary upgrades when available.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do you offer airport transfers? <span>+</span></div><div class="faq-a">Yes! Airport, railway station, and bus stand transfers can be arranged for all our properties. Please inform us at least 6 hours before arrival with your travel details and we'll coordinate pick-up.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Can I modify my booking after confirmation? <span>+</span></div><div class="faq-a">Absolutely. Most bookings can be modified free of charge up to 48 hours before check-in. Simply call +91 95107 71506 or email bookings@theskyimperial.com with your booking reference.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Is WiFi available at all properties? <span>+</span></div><div class="faq-a">Yes — high-speed complimentary WiFi is available throughout all Sky Imperial properties, including rooms, lobbies, restaurants, and meeting rooms. Corporate guests receive dedicated bandwidth allocation.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do you host destination weddings? <span>+</span></div><div class="faq-a">Yes, weddings are one of our specialities! We host ceremonies ranging from 50 to 800 guests across our properties. Our dedicated wedding coordinator will handle everything from décor to catering. Contact us early to check availability for your date.</div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><a href="index.html" class="nav-logo">The Sky <span style="color:var(--cream)">Imperial</span></a><p class="footer-about">25+ destinations across India. Available 24×7 for you.</p><div class="footer-social"><a href="https://www.facebook.com/theskyimperial.official/" target="_blank">f</a><a href="https://www.instagram.com/the_sky_imperial" target="_blank">in</a><a href="mailto:bookings@theskyimperial.com">✉</a></div></div><div class="footer-col"><h4>Quick Contact</h4><ul><li><a href="tel:+919510771506">+91 95107 71506</a></li><li><a href="mailto:bookings@theskyimperial.com">bookings@theskyimperial.com</a></li></ul></div><div class="footer-col"><h4>Explore</h4><ul><li><a href="destinations.html">Destinations</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="offers.html">Offers</a></li></ul></div><div class="footer-col"><h4>Policies</h4><ul><li><a href="#">Cancellation Policy</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms & Conditions</a></li></ul></div></div><div class="footer-bottom"><p class="footer-copy">© 2025 The Sky Imperial Hotels & Resorts.</p><div class="footer-badges"><span class="badge">🔒 Secure</span><span class="badge">✓ Best Rate</span></div></div></div></footer>
+<button class="chat-btn" onclick="toggleChat()">💬</button>
+<div class="chat-window" id="chatWindow"><div class="chat-header"><div class="chat-header-title">🏨 Sky Imperial Concierge</div><button class="chat-close" onclick="toggleChat()">✕</button></div><div class="chat-messages" id="chatMessages"><div class="chat-msg bot">Hello! How can I help you today? 🌟</div></div><div class="chat-suggestions"><button class="chat-suggest" onclick="sendSuggest('Book a Room')">🗓️ Book</button><button class="chat-suggest" onclick="sendSuggest('Wedding Enquiry')">💍 Wedding</button><button class="chat-suggest" onclick="sendSuggest('Contact / Help')">📞 Call Us</button></div><div class="chat-input-area"><input class="chat-input" id="chatInput" placeholder="Type..."><button class="chat-send" onclick="sendMsg()">➤</button></div></div>
+<script src="shared.js"></script>
+<script>
+function submitForm(){alert('Thank you for your enquiry!\n\nOur team will respond within 2–4 hours.\nFor urgent bookings call: +91 95107 71506');}
+function toggleFaq(el){el.classList.toggle('open');}
+</script>
+</body></html>
